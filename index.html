@@ -67,7 +67,7 @@
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="#top"><span class="brand-mark"><i class="bi bi-flower1"></i></span><span><span class="brand-cn d-block">禪繞空間</span><span class="brand-en d-block">ZENTANGLE SPACE</span></span></a>
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><i class="bi bi-list fs-3"></i></button>
-      <div class="collapse navbar-collapse justify-content-end" id="nav"><ul class="navbar-nav align-items-lg-center gap-lg-1"><li class="nav-item"><a class="nav-link" href="#about">遇見寧靜</a></li><li class="nav-item"><a class="nav-link" href="#flow">解憂空間</a></li><li class="nav-item"><a class="nav-link" href="#why">為什麼是我們？</a></li><li class="nav-item"><a class="nav-link" href="#testimonials">心流體驗</a></li><li class="nav-item"><a class="nav-link" href="#research">學員見證</a></li><li class="nav-item"><a class="nav-link" href="#cta">立即開始</a></li><li class="nav-item ms-lg-2"><a class="btn btn-olive btn-sm" href="#cta">立即免費下載</a></li></ul></div>
+      <div class="collapse navbar-collapse justify-content-end" id="nav"><ul class="navbar-nav align-items-lg-center gap-lg-1"><li class="nav-item"><a class="nav-link" href="#about">遇見寧靜</a></li><li class="nav-item"><a class="nav-link" href="#flow">解憂空間</a></li><li class="nav-item"><a class="nav-link" href="#why">為什麼是我們？</a></li><li class="nav-item"><a class="nav-link" href="#testimonials">心流體驗</a></li><li class="nav-item"><a class="nav-link" href="#research">學員見證</a></li><li class="nav-item"><a class="nav-link" href="#cta">立即開始</a></li><li class="nav-item ms-lg-2"><a class="btn btn-olive btn-sm btnstyle" href="#cta">加入購物車</a></li></ul></div>
     </div>
   </nav>
 
@@ -88,5 +88,19 @@
   </main>
   <footer class="py-3 text-center"><div class="fs-5"><i class="bi bi-facebook me-2"></i><i class="bi bi-instagram me-2"></i><i class="bi bi-youtube"></i></div>© 2026 禪繞空間 ZenTangle Space. All rights reserved.</footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.querySelector('.btnstyle')?.addEventListener('click', function () {
+    gtag('event', 'add_to_cart', {
+      currency: 'TWD',
+      value: 0,
+      items: [{
+        item_id: 'zentangle-course',
+        item_name: '30天禪繞畫練習',
+        quantity: 1
+      }]
+    });
+    alert('您已將商品加入購物車');
+  });
+</script>
 </body>
 </html>
