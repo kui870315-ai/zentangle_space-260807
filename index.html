@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="禪繞空間，透過畫筆回到內在的平靜。">
+  <title>禪繞空間｜在每一筆線條之間，遇見更平靜的自己</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#332f2b; --olive:#778064; --olive-dark:#5d664d; --sage:#e9ebe1; --cream:#faf8f3; --line:#d9d6ce; }
+    * { box-sizing:border-box; }
+    body { color:var(--ink); background:var(--cream); font-family:"Noto Sans TC",sans-serif; line-height:1.75; }
+    h1,h2,h3,h4,.serif { font-family:"Noto Serif TC",serif; }
+    .navbar { min-height:76px; background:rgba(255,255,255,.94); }
+    .brand-mark { width:38px; height:38px; display:grid; place-items:center; border:1px solid var(--olive); border-radius:50%; color:var(--olive); font-size:1.25rem; }
+    .brand-cn { letter-spacing:.22em; font-family:"Noto Serif TC",serif; font-size:1.2rem; line-height:1; }
+    .brand-en { color:#777; letter-spacing:.18em; font-size:.48rem; }
+    .nav-link { color:var(--ink)!important; font-size:.82rem; padding:.6rem .85rem!important; }
+    .btn-olive { background:var(--olive); color:#fff; border-radius:99px; border:0; padding:.55rem 1.35rem; }
+    .btn-olive:hover { background:var(--olive-dark); color:#fff; }
+    .hero { min-height:530px; position:relative; overflow:hidden; display:flex; align-items:center; background:linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.91) 43%,rgba(255,255,255,.1) 67%),url('https://images.unsplash.com/photo-1519710887729-3c8444c2a0e8?auto=format&fit=crop&w=1800&q=85') center/cover; }
+    .hero::after { content:""; position:absolute; inset:0; background:radial-gradient(circle at 38% 35%,rgba(255,255,255,.7),transparent 28%); pointer-events:none; }
+    .hero-content { position:relative; z-index:1; }
+    .leaf { color:var(--olive); font-size:3.2rem; display:block; transform:rotate(-20deg); opacity:.85; }
+    .hero h1 { font-size:clamp(2rem,4vw,3.35rem); font-weight:500; letter-spacing:.09em; line-height:1.45; }
+    .play { width:58px; height:58px; display:inline-grid; place-items:center; border:1px solid #827c73; border-radius:50%; color:var(--ink); text-decoration:none; }
+    .section { padding:78px 0; }
+    .section-title { display:flex; align-items:center; gap:1.6rem; justify-content:center; margin-bottom:2.1rem; font-size:1.52rem; letter-spacing:.12em; }
+    .section-title::before,.section-title::after { content:""; height:1px; width:min(20vw,190px); background:var(--line); }
+    .feature-icon { width:76px; height:76px; display:grid; place-items:center; margin:0 auto 1rem; border-radius:50%; background:linear-gradient(135deg,#eeeee9,#d8d9d2); color:var(--olive-dark); font-size:2.2rem; }
+    .problem-item { border-right:1px solid #e0ddd7; }
+    .problem-item:last-child { border:0; }
+    .small-title { font-family:"Noto Serif TC",serif; font-size:1.02rem; }
+    .why-disc { width:210px; height:210px; margin:auto; display:grid; place-items:center; border-radius:50%; background:radial-gradient(circle,#828a70 0 25%,#bec3af 26% 51%,#e1e2d7 52%); color:#fff; text-align:center; }
+    .why-disc span { display:block; letter-spacing:.06em; }
+    .why-disc .inner { line-height:2.25; }
+    .round-icon { flex:0 0 50px; width:50px; height:50px; border-radius:50%; display:grid; place-items:center; color:#fff; background:linear-gradient(135deg,#97a086,#586249); font-size:1.35rem; }
+    .flow { background:#fff; }
+    .flow-card { padding:1.2rem 1.2rem 1.1rem; min-height:150px; }
+    .flow-card + .flow-card { border-left:1px solid #e3e1db; }
+    .square-icon { width:64px; height:64px; display:grid; place-items:center; flex:0 0 64px; background:#f4f1eb; color:#777660; border-radius:10px; font-size:1.85rem; }
+    .testimonial { height:100%; padding:1.2rem; background:#fff; border-radius:11px; box-shadow:0 4px 18px rgba(73,62,47,.1); }
+    .avatar { width:58px; height:58px; border-radius:50%; object-fit:cover; }
+    .research { background:linear-gradient(90deg,rgba(255,255,255,.95),rgba(255,255,255,.68)),url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1500&q=80') center/cover; }
+    .research-image { min-height:235px; border-radius:0 0 50px 0; background:url('https://images.unsplash.com/photo-1516383607781-913a19294fd1?auto=format&fit=crop&w=900&q=85') center/cover; }
+    .note { background:rgba(245,241,233,.9); border-radius:10px; }
+    .cta { background:linear-gradient(90deg,#fcfbf7 0%,#f4f2e9 100%); }
+    .cta-box { background:#fff; box-shadow:0 3px 15px rgba(73,62,47,.1); border-radius:10px; }
+    footer { background:#788064; color:#fff; font-size:.72rem; }
+    @media (max-width:991.98px) { .hero { min-height:610px; background:linear-gradient(90deg,rgba(255,255,255,.97),rgba(255,255,255,.78)),url('https://images.unsplash.com/photo-1519710887729-3c8444c2a0e8?auto=format&fit=crop&w=1200&q=85') center/cover; } .problem-item { border-right:0; border-bottom:1px solid #e0ddd7; padding:1.6rem 0; } .flow-card + .flow-card { border-left:0; border-top:1px solid #e3e1db; } }
+    @media (max-width:575.98px) { .section { padding:55px 0; } .section-title { font-size:1.25rem; gap:.7rem; } .section-title::before,.section-title::after { width:36px; } .hero h1 { letter-spacing:.04em; } }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top border-bottom border-light">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#top"><span class="brand-mark"><i class="bi bi-flower1"></i></span><span><span class="brand-cn d-block">禪繞空間</span><span class="brand-en d-block">ZENTANGLE SPACE</span></span></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><i class="bi bi-list fs-3"></i></button>
+      <div class="collapse navbar-collapse justify-content-end" id="nav"><ul class="navbar-nav align-items-lg-center gap-lg-1"><li class="nav-item"><a class="nav-link" href="#about">遇見寧靜</a></li><li class="nav-item"><a class="nav-link" href="#flow">解憂空間</a></li><li class="nav-item"><a class="nav-link" href="#why">為什麼是我們？</a></li><li class="nav-item"><a class="nav-link" href="#testimonials">心流體驗</a></li><li class="nav-item"><a class="nav-link" href="#research">學員見證</a></li><li class="nav-item"><a class="nav-link" href="#cta">立即開始</a></li><li class="nav-item ms-lg-2"><a class="btn btn-olive btn-sm" href="#cta">立即免費下載</a></li></ul></div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero" id="about"><div class="container hero-content"><div class="row"><div class="col-lg-7"><i class="bi bi-flower2 leaf"></i><h1 class="mt-2 mb-3">在每一筆線條之間，<br>遇見更平靜的自己。</h1><p class="mb-4">不需要任何繪畫天賦，只需一支筆、一張紙，<br>讓混亂的思緒在 15 分鐘內重獲安定。</p><div class="d-flex align-items-center gap-3"><a class="play" href="#flow" aria-label="播放心引導影片"><i class="bi bi-play-fill fs-4"></i></a><p class="mb-0 small">播放靜心引導影片（ASMR）<br><span class="text-muted">戴上耳機，享受 15 分鐘的靜心時光</span></p></div></div></div></div></section>
+
+    <section class="section" id="flow"><div class="container"><h2 class="section-title">解憂空間</h2><div class="row text-center g-0"><div class="col-lg-4 problem-item px-lg-5"><h3 class="small-title">問題 / Problem</h3><div class="feature-icon"><i class="bi bi-question-lg"></i></div><p class="small">你是否也感到生活節奏太快？<br>每天被訊息與工作包圍，<br>卻找不到一絲喘息的空間？</p></div><div class="col-lg-4 problem-item px-lg-5"><h3 class="small-title">擾動不安 / Agitation</h3><div class="feature-icon"><i class="bi bi-scribble"></i></div><p class="small">試過冥想卻坐不住？<br>想靜畫畫卻擔心「畫得不像」？<br>焦慮與比較心，是否讓你越放鬆越感到壓力重重？</p></div><div class="col-lg-4 px-lg-5"><h3 class="small-title">解決方案 / Solution</h3><div class="feature-icon"><i class="bi bi-heart"></i></div><p class="small">「禪繞空間」提供一個<br>「沒有門檻、沒有對錯」的創作靜心園地。<br>透過官方 8 步驟，帶你進入全神貫注的心流狀態。</p></div></div></div></section>
+
+    <section class="section pt-2" id="why"><div class="container"><h2 class="section-title">為什麼是我們？<small class="fs-6">（黃金圈）</small></h2><div class="row align-items-center justify-content-center g-5"><div class="col-md-5 text-center"><div class="why-disc"><div class="inner"><span>WHY</span><span class="mt-3">HOW</span><span class="mt-3 text-dark">WHAT</span></div></div></div><div class="col-md-6"><div class="d-flex gap-3 mb-3"><span class="round-icon"><i class="bi bi-heart"></i></span><div><h3 class="small-title mb-0">Why 為什麼</h3><p class="small mb-0">我們相信，每個人都值得擁有屬於自己的寧靜時光。藝術不只是作品，更是一種與自己連結的方式。</p></div></div><div class="d-flex gap-3 mb-3"><span class="round-icon"><i class="bi bi-pencil"></i></span><div><h3 class="small-title mb-0">How 如何做</h3><p class="small mb-0">我們透過「一次一筆畫」的哲學，將複雜的圖像解構為簡單的幾何元素，讓創作變得毫不費力。</p></div></div><div class="d-flex gap-3"><span class="round-icon"><i class="bi bi-book"></i></span><div><h3 class="small-title mb-0">What 做了什麼</h3><p class="small mb-0">提供系統化的線上課程與實體工作坊，從零基礎教學到進階圖樣練習，陪伴你找回內在節奏。</p></div></div></div></div></div></section>
+
+    <section class="section flow" id="experience"><div class="container"><h2 class="section-title">心流體驗 <small class="fs-6">（課程亮點）</small></h2><div class="row g-0"><div class="col-lg-4 flow-card"><h3 class="small-title text-center mb-3">Feature 特點</h3><div class="d-flex gap-3 mb-3"><span class="square-icon"><i class="bi bi-flower1"></i></span><p class="small mb-0"><b>解構式圖樣教學</b><br>將大自然與建築轉化為簡單圖騰與線條。</p></div><div class="d-flex gap-3"><span class="square-icon"><i class="bi bi-laptop"></i></span><p class="small mb-0"><b>彈性學習形式</b><br>提供 24 小時隨時觀看的線上課程與溫暖互動的實體工作坊。</p></div></div><div class="col-lg-4 flow-card"><h3 class="small-title text-center mb-3">Advantage 優勢</h3><div class="d-flex gap-3 mb-3"><span class="square-icon"><i class="bi bi-x-lg"></i></span><p class="small mb-0"><b>不需要繪畫天賦</b><br>因為禪繞畫中「沒有錯誤」。</p></div><div class="d-flex gap-3"><span class="square-icon"><i class="bi bi-geo-alt"></i></span><p class="small mb-0"><b>不受空間限制</b><br>隨時隨地都能開啟一段靜心之旅。</p></div></div><div class="col-lg-4 flow-card"><h3 class="small-title text-center mb-3">Benefit 利益</h3><div class="d-flex gap-3 mb-3"><span class="square-icon"><i class="bi bi-brain"></i></span><p class="small mb-0"><b>實證減壓</b><br>研究顯示，禪繞畫能有效提升專注力，減輕現代人的壓力焦慮。</p></div><div class="d-flex gap-3"><span class="square-icon"><i class="bi bi-star"></i></span><p class="small mb-0"><b>成就感提升</b><br>在短時間內完成獨一無二的作品，重建自信心。</p></div></div></div></div></section>
+
+    <section class="section" id="testimonials"><div class="container"><h2 class="section-title">學員見證</h2><div class="row g-4"><div class="col-md-4"><article class="testimonial d-flex gap-3"><img class="avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="行銷企劃小薇"><p class="small mb-0">「每天 15 分鐘的練習，讓我從焦慮與失眠中慢慢找回平靜。」<br><span class="d-block text-end mt-2">— 小薇 / 行銷企劃</span></p></article></div><div class="col-md-4"><article class="testimonial d-flex gap-3"><img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="教師 Amanda"><p class="small mb-0">「零基礎也能畫出美麗的作品。老師的引導很溫柔，這樣的氛圍讓我放鬆。」<br><span class="d-block text-end mt-2">— Amanda / 教師</span></p></article></div><div class="col-md-4"><article class="testimonial d-flex gap-3"><img class="avatar" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="自由接案者 Lily"><p class="small mb-0">「30 天的練習讓我更了解自己的情緒，也更有耐心面對生活中的挑戰。」<br><span class="d-block text-end mt-2">— Lily / 自由接案者</span></p></article></div></div><p class="text-center mt-4 small"><i class="bi bi-people fs-4 me-2"></i>加入「心流社群」，與上千位學員一起進行 30 天線條練習，讓重建成為你專屬的放鬆儀式。</p></div></section>
+
+    <section class="research" id="research"><div class="container-fluid px-0"><div class="row g-0 align-items-center"><div class="col-lg-5"><div class="research-image"></div></div><div class="col-lg-7"><div class="p-4 p-lg-5"><div class="d-flex gap-3"><span class="feature-icon flex-shrink-0 m-0" style="width:58px;height:58px;font-size:1.5rem"><i class="bi bi-mortarboard"></i></span><div><h2 class="h4 serif">學術實證 × 專業信任</h2><p class="small">多項研究指出，正念禪繞畫能有效提升專注力、減緩壓力反應，促進情緒調節，讓身心健康具有正向影響。</p></div></div><p class="note small p-3 mb-2">資料來源：林佳馨（2020）。正念禪繞畫對職場壓力與睡眠效果之探討。</p><a class="small text-decoration-none" style="color:var(--olive-dark)" href="#cta">＞了解更多研究與禪繞畫的好處</a></div></div></div></div></section>
+
+    <section class="section cta text-center" id="cta"><div class="container"><i class="bi bi-flower2 leaf"></i><h2 class="serif">現在，就為自己留一段白。</h2><p>讓筆尖的舞蹈，梳理混亂的紙張，把平靜還給心靈。</p><div class="row justify-content-center g-3 mt-2"><div class="col-md-5"><div class="cta-box p-3 d-flex align-items-center text-start gap-3"><span class="feature-icon flex-shrink-0 m-0" style="width:58px;height:58px;font-size:1.5rem"><i class="bi bi-download"></i></span><div><b>立即免費下載：</b><br><span class="small">5 個基礎圖樣練習本</span><br><a href="#" class="btn btn-olive btn-sm mt-1">免費下載</a></div></div></div><div class="col-md-5"><div class="cta-box p-3 d-flex align-items-center text-start gap-3"><span class="feature-icon flex-shrink-0 m-0" style="width:58px;height:58px;font-size:1.5rem"><i class="bi bi-calendar4-week"></i></span><div><b>報名《30天禪繞畫練習》：</b><br><span class="small">找回你的心流時光</span><br><a href="#" class="btn btn-olive btn-sm mt-1">立即報名</a></div></div></div></div></div></section>
+  </main>
+  <footer class="py-3 text-center"><div class="fs-5"><i class="bi bi-facebook me-2"></i><i class="bi bi-instagram me-2"></i><i class="bi bi-youtube"></i></div>© 2026 禪繞空間 ZenTangle Space. All rights reserved.</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
