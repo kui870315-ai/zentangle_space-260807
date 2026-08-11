@@ -57,3 +57,6 @@ USER NAME:kui870315-ai
 專案名稱:zentangle_space-260807
 HTTPS:https://github.com/kui870315-ai/zentangle_space-260807.git
 SSH:git@github.com:kui870315-ai/zentangle_space-260807.git
+
+## Github發布網址
+https://kui870315-ai.github.io/zentangle_space-260807/
